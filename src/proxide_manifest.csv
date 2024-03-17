@@ -1,0 +1,5 @@
+Resource,Request
+/favicon.ico,./resources/favicon.ico
+/,./resources/home.html
+/music,./resources/music/Tetris.ogg
+/404.jpg,./resources/404/404.jpg

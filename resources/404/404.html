@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <HEAD>
+        <TITLE>404 Not Found</TITLE>
+    </HEAD>
+
+    <BODY>
+        <img src="404.jpg" alt="404.jpg" style="width: fit-content">
+
+        <iframe src="http://localhost:9999"></iframe>
+
+        <HR>
+            <h2>Proxide Web Server // Error 404 (Not Found)</h2>
+            <h3>InDev v1</h3>
+            @<var id="current-date"></var>
+        <HR>
+
+        <p>
+            The requested resource on <b id="current-url"></b> could not be accessed
+            on this Proxide Web Server. Please check that
+            this resource hasn't been moved, and try again later.
+        </p>
+        <p>
+            Have a great day! :)
+        </p>
+
+        <script>
+            const urlElement = document.getElementById("current-url");
+            const dateElement = document.getElementById("current-date");
+            const currentUrl = window.location.href;
+            urlElement.textContent = `${currentUrl}`;
+            dateElement.textContent = `${Date().toString()}`;
+
+            window.location.href = "localhost:9999/404";
+        </script>
+
+    </BODY>
+</HTML>
