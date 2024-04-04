@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-image: url("/banner.jpg");
+            }
+
+            #BrowsingControls{
+                display:grid;
+                grid-template-columns: 33.33% 33.33% 33.33%;
+                margin-top:0px !important;
+            }
+
+            .bordered{
+                border: 1px solid black;
+            }
+
+            .textCentered{
+                text-align: center;
+            }
+
+            .basicMargin{
+                margin: 10px;
+            }
+
+            #PgHeader{
+                margin-bottom: 1px !important;
+            }
+
+            #BrowsingControls{
+            }
+
+            #background{
+                background-color:rgb(208 206 226);
+            }
+
+            #ProjectContainer{
+                background-color: white;
+            }
+
+            .MenuBackground {
+                background-color: rgb(218 232 252);
+            }
+
+            .ContentContainer{
+                margin:10px;
+                background-color: rgb(218 232 252);
+                text-align: center;
+                display:grid;
+                grid-template-columns: 50% 50%;
+            }
+
+            .ContentContainer button {
+                margin:5px;
+            }
+
+            .marginTop{
+                margin-top:5px;
+            }
+        </style>
+    </head>
+    <body id="background">
+        <div class="textCentered">Home Page</div>
+        <div id="ProjectContainer" class="basicMargin bordered">
+            <div id="PgHeader" class="textCentered basicMargin bordered">Page Header</div>
+            <div id="BrowsingControls" class="basicMargin">
+                <div class="textCentered bordered MenuBackground" style="margin-right:10px">
+                    <button onclick="window.location.href='/home.html'">
+                        Home
+                    </button>
+                </div>
+                <div class="textCentered bordered MenuBackground">
+                    <button onclick="window.location.href='/BrowseDemos.html'">
+                        Browse Demos
+                    </button>
+                </div>
+                <div class="textCentered bordered MenuBackground" style="margin-left:10px">
+                    <button onclick="window.location.href='/AboutUs.html'">
+                        About Us
+                    </button>                    
+                </div>
+            </div>
+
+            <div id="VideoListContainer" class="basicMargin bordered">
+                &nbsp;&nbsp;&nbsp;Content List:
+                
+                <div class="ContentContainer" >
+                    <div class='marginTop'>Example image display</div>
+                    <button onclick="window.location.href='/pictures/picturetest.html'">
+                        PictureTest
+                    </button>
+                </div>
+
+                <div class="ContentContainer" >
+                    <div class='marginTop'>Example Audio streaming</div>
+                    <button onclick="window.location.href='/music/musictest.html'">
+                        AudioTest
+                    </button>
+                </div>
+
+                <div class="ContentContainer" >
+                    <div class='marginTop'>Example MP4 streaming</div>
+                    <button onclick="window.location.href='/video/videotest.html'">
+                        VideoTest
+                    </button>
+                </div>
+
+                <div class="ContentContainer" >
+                    <div class='marginTop'>Example video streaming via Dasj.js</div>
+                    <button onclick="window.location.href='/video/dash.html'">
+                        Dashtest
+                    </button>
+                </div>
+
+                <div class="ContentContainer" >
+                    <div class='marginTop'>Our Final Report in PDF form</div>
+                    <button onclick="window.location.href='/home.html'">
+                        FinalReport
+                    </button>
+                </div>
+            </div>
+
+
+
+        </div>
+        <footer class="textCentered">Page Footer</footer>
+    </body>
+</html>

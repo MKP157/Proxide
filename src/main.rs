@@ -2,7 +2,7 @@ use std::collections::HashMap;
 use std::fs;
 use std::io::{BufRead, Write};
 use std::error::*;
-use std::hash::Hash;
+//use std::hash::Hash;
 use csv::Reader;
 use lazy_static::lazy_static;
 use threadpool::ThreadPool;
@@ -23,7 +23,7 @@ use threadpool::ThreadPool;
 
 // This URI is whatever address the server
 // will be accessed on BY THE CLIENT.
-const URI: &str = "127.0.0.1:9999";
+const _URI: &str = "127.0.0.1:9999";
 
 
 
@@ -106,7 +106,7 @@ fn resolve( manifest: & Vec<HashMap<String, String>>,
     return (content, 404i32)
 }
 
-/** main *****************************************************/
+////////////////// main ///////////////////
 
 // Generate manifest for valid files.
 // Needs to be Static so that different threads can access it.
@@ -181,8 +181,8 @@ fn main() {
             // stores the data corresponding to the request as an
             // array of bytes, as well as the corresponding HTTP
             // status, and returns it as a tuple.
-            let mut http_status:i32;
-            let mut body:Vec<u8>;
+            let http_status:i32;
+            let body:Vec<u8>;
             (body, http_status) = resolve(&MANIFEST, &requested_resource);
 
             // We next assemble the HTTP header for the response.

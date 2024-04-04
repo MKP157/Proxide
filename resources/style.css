@@ -1,0 +1,40 @@
+body {
+    background-image: url("/banner.jpg");
+}
+
+#BrowsingControls{
+    display:grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+.bordered{
+    border: 1px solid black;
+}
+
+.textCentered{
+    text-align: center;
+}
+
+.basicMargin{
+    margin: 10px;
+}
+
+#PgHeader{
+    margin-bottom: 1px !important;
+}
+
+#BrowsingControls{
+    margin-top:0px !important;
+}
+
+#background{
+    background-color:rgb(208 206 226);
+}
+
+#ProjectContainer{
+    background-color: white;
+}
+
+.MenuBackground {
+    background-color: rgb(218 232 252);
+}

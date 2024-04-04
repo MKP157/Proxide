@@ -22,7 +22,7 @@ root_dir = "../resources/"  # Replace with your actual directory path
 file = open("./proxide_manifest.csv", "w")
 file.write("Resource,Request\n")
 for file_path in list_all_files(root_dir):
-  file.write(str("/" + file_path.split(root_dir)[1] + "," + file_path[1:] + "\n"))
+  file.write(str("/" + file_path.split(root_dir)[1] + "," + file_path[1:].replace('\\', '/') + "\n"))
 
 # Add custom redirects
 CUSTOM = [ '/,./resources/home.html\n', '/home,./resources/home.html\n' ]
