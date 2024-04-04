@@ -21,6 +21,11 @@ use threadpool::ThreadPool;
  *      Aiden Manuel - Feb 25 2024
  ****************************************/
 
+// This URI is whatever address the server
+// will be accessed on BY THE CLIENT.
+const URI: &str = "127.0.0.1:9999";
+
+
 
 /** read_file_as_bytes ****************************************
  * @ Matthew Kenneth Peterson
@@ -109,7 +114,26 @@ lazy_static! {
     static ref MANIFEST:Vec<HashMap<String, String>> = hash_manifest("src/proxide_manifest.csv").unwrap();
 }
 
+
 fn main() {
+    /*use std::process::Command;
+
+    let output = if cfg!(target_os = "windows") {
+        Command::new("cmd")
+            .args(["/C", "python3 gen_manifest.py"])
+            .output()
+            .expect("failed to execute process")
+    } else {
+        Command::new("bash")
+            .arg("-c")
+            .arg("python3 gen_manifest.py")
+            .output()
+            .expect("failed to execute process")
+    };
+
+    let hello = output.stdout;
+    */
+
 
     // Allocate thread pool for simultaneous connections
     let pool = ThreadPool::new(8);
@@ -157,9 +181,9 @@ fn main() {
             // stores the data corresponding to the request as an
             // array of bytes, as well as the corresponding HTTP
             // status, and returns it as a tuple.
-            let mut status:i32;
+            let mut http_status:i32;
             let mut body:Vec<u8>;
-            (body, status) = resolve(&MANIFEST, &requested_resource);
+            (body, http_status) = resolve(&MANIFEST, &requested_resource);
 
             // We next assemble the HTTP header for the response.
             // This is done by concatenating together the mandatory
@@ -167,8 +191,13 @@ fn main() {
             // above.
             let mut header = String::new();
             header.push_str("HTTP/1.1 ");
-            header.push_str(&*status.to_string());
-            header.push_str(" OK\r\n\r\n");
+            header.push_str(&*http_status.to_string());
+
+
+            header.push_str(match http_status {
+                200 => " OK\r\n\r\n",
+                _   => " NOT FOUND\r\n\r\n"
+            } );
 
             let mut result:Vec<u8> = Vec::from(header.as_bytes());
             result = [result, body].concat();
