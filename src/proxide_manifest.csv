@@ -1,5 +1,14 @@
 Resource,Request
 /favicon.ico,./resources/favicon.ico
+/banner.jpg,./resources/banner.jpg
+/home.html,./resources/home.html
+/video/videotest.html,./resources/video/videotest.html
+/video/rename.mp4,./resources/video/rename.mp4
+/video/dash.html,./resources/video/dash.html
+/music/musictest.html,./resources/music/musictest.html
+/music/Tetris.ogg,./resources/music/Tetris.ogg
+/pictures/picturetest.html,./resources/pictures/picturetest.html
+/404/404.jpg,./resources/404/404.jpg
+/404/404.html,./resources/404/404.html
 /,./resources/home.html
-/music,./resources/music/Tetris.ogg
-/404.jpg,./resources/404/404.jpg
+/home,./resources/home.html

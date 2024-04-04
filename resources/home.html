@@ -1,23 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-    <HEAD>
-        <TITLE>Your Title Here</TITLE>
-    </HEAD>
+<html>
+    <head>
+        <style>
+            body {
+                background-image: url("/banner.jpg");
+            }
 
-    <BODY BGCOLOR="FFFFFF">
-        <HR>
-        <a href="http://google.com">Google</a>
-        is a link to another nifty site.
+            #BrowsingControls{
+                display:grid;
+                grid-template-columns: 33.33% 33.33% 33.33%;
+            }
 
-        <H1>This is a Header</H1>
-        <H2>This is a Medium Header</H2>
+            .bordered{
+                border: 1px solid black;
+            }
 
-        Send me mail at <a href="mailto:support@yourcompany.com">
-            support@yourcompany.com</a>.
+            .textCentered{
+                text-align: center;
+            }
 
-        <P> This is a new paragraph!
-        <P> <B>This is a new paragraph!</B>
-            <BR> <B><I>This is a new sentence without a paragraph break, in bold italics.</I></B>
-        <HR>
-    </BODY>
-</HTML>
+            .basicMargin{
+                margin: 10px;
+            }
+
+            #PgHeader{
+                margin-bottom: 1px !important;
+            }
+
+            #BrowsingControls{
+                margin-top:0px !important;
+            }
+
+            #background{
+                background-color:rgb(208 206 226);
+            }
+
+            #ProjectContainer{
+                background-color: white;
+            }
+
+            .MenuBackground {
+                background-color: rgb(218 232 252);
+            }
+        </style>
+    </head>
+    <body id="background">
+        <div class="textCentered">Home Page</div>
+        <div id="ProjectContainer" class="basicMargin bordered">
+            <div id="PgHeader" class="textCentered basicMargin bordered">Page Header</div>
+            <div id="BrowsingControls" class="basicMargin">
+                <div class="textCentered bordered MenuBackground" style="margin-right:10px">Home</div>
+                <div class="textCentered bordered MenuBackground">Upload</div>
+                <div class="textCentered bordered MenuBackground" style="margin-left:10px">Browse</div>
+            </div>
+            <div id="TitleContainer" class="bordered basicMargin">
+                <h3>Project title: Peroxide</h3>
+            </div>
+            <div id="ProjectMembers" class="bordered basicMargin">
+                <div>Project Members</div>
+                <ul>
+                    <li>Josh Hickman</li>
+                    <li>Aiden Manuel</li>
+                    <li>Matthew Peterson</li>
+                </ul>
+            </div>
+
+            <div id="Description" class="bordered basicMargin">
+                The goal of our project has been to get a basic Rust web-server working. <br><br>
+
+                This allows us to explore the basics of responding to web requests, working in Rust and using its threading capabilities.<br><br>
+
+                Primary goal is to be able to provde HTML pages in response to normal web navigation of our site. With optional objective of providing videos encoded by our Architecture project. 
+            </div>
+        </div>
+        <footer class="textCentered">Page Footer</footer>
+    </body>
+</html>
