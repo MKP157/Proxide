@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <TITLE>Dash Demo</TITLE>
-
-        <link rel="stylesheet" href="/style.css">
-
         <script src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/4.1.0/dash.all.min.js"></script>
+
         <script>
             function startVideo(mpd) {
               var video, player;
@@ -18,7 +15,7 @@
               player.setAutoPlay(false);
               player.initialize(video, url, true);
             }
-        </script>
+          </script>
 
         <style>
             video {
@@ -76,53 +73,22 @@
     </head>
     <body id="background" onload="startVideo('manifest.mpd');">
         <div class="textCentered">
-            <img width="200" src="/PrOxide_Logo.png">
+            <img width="400" src="/PrOxide_Logo.png">
             </img>
         </div>
-
         <div id="ProjectContainer" class="basicMargin bordered">
-            <div id="PgHeader" class="basicMargin bordered">Proxide Web Server v1.0 // <var id="current-date"></var></div>
-            <script>
-                const urlElement = document.getElementById("current-url");
-                const dateElement = document.getElementById("current-date");
-                const currentUrl = window.location.href;
-                urlElement.textContent = `${currentUrl}`;
-                dateElement.textContent = `${Date().toString()}`;
-            </script>
 
+
+            <div id="PgHeader" class="textCentered basicMargin bordered">Page Header</div>
             <div id="BrowsingControls" class="basicMargin">
-                <div class="textCentered bordered MenuBackground" style="margin-right:10px">
-                    <button onclick="window.location.href='/home.html'">
-                        Home
-                    </button>
-                </div>
-                <div class="textCentered bordered MenuBackground">
-                    <button onclick="window.location.href='/BrowseDemos.html'">
-                        Browse Demos
-                    </button>
-                </div>
-                <div class="textCentered bordered MenuBackground" style="margin-left:10px">
-                    <button onclick="window.location.href='/AboutUs.html'">
-                        About Us
-                    </button>
-                </div>
+                <div class="textCentered bordered MenuBackground" style="margin-right:10px">Home</div>
+                <div class="textCentered bordered MenuBackground">Upload</div>
+                <div class="textCentered bordered MenuBackground" style="margin-left:10px">Browse</div>
             </div>
-
-            <div id="TitleContainer" class="textCentered bordered basicMargin">
-                <h3>HTTP DASH Playback Demo</h3>
-            </div>
-
-            <div id="videoContainer">
-                <video controls></video>
-
-                <div id="VideoDetailsContainer">
-                    <div id="VideoTitle"></div>
-                    <div id="VideoDetails">
-                        <div id="Uploader_Name" class="bordered basicMargin">Author</div>
-                        <div id="Upload_Date" class="bordered basicMargin">Date</div>
-                    </div>
-                </div>
-            </div>
+            <audio controls autoplay muted>
+                <source src="../music/Tetris.ogg" type="audio/ogg">
+                Your browser does not support the audio element.
+            </audio>
         </div>
         <footer class="textCentered">
             <pre class="textCentered"> &copy;1999 Rustacean Co. </pre>

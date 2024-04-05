@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <TITLE>About Us</TITLE>
         <style>
             body {
                 background-image: url("/banner.jpg");
@@ -77,8 +78,17 @@
             </img>
         </div>
         <div id="ProjectContainer" class="basicMargin bordered">
-            <div id="PgHeader" class="textCentered basicMargin bordered">Page Header</div>
+            <div id="PgHeader" class="textCentered basicMargin bordered">Proxide Web Server v1.0 // <var id="current-date"></var></div>
+            <script>
+                const urlElement = document.getElementById("current-url");
+                const dateElement = document.getElementById("current-date");
+                const currentUrl = window.location.href;
+                urlElement.textContent = `${currentUrl}`;
+                dateElement.textContent = `${Date().toString()}`;
+            </script>
             <div id="BrowsingControls" class="basicMargin">
+
+
                 <div class="textCentered bordered MenuBackground" style="margin-right:10px">
                     <button onclick="window.location.href='/home.html'">
                         Home
@@ -95,7 +105,9 @@
                     </button>                    
                 </div>
             </div>
-
+            <div id="TitleContainer" class="textCentered bordered basicMargin">
+                <h3>Our Team</h3>
+            </div>
             <div id="ProjectMembers" class="basicMargin bordered">
                 <div class="Person_Image">
                     <div class="basicMargin"><img title="Aiden Manuel" src="/AidenProfile.jpg"></img></div>

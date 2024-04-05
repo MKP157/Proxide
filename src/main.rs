@@ -23,8 +23,8 @@ use threadpool::ThreadPool;
 
 // This URI is whatever address the server
 // will be accessed on BY THE CLIENT.
-const _URI: &str = "127.0.0.1:9999";
-
+const _URI: &str = //"127.0.0.1:9999";
+    "networking.mkp157.xyz";
 
 
 /** read_file_as_bytes ****************************************
@@ -116,27 +116,10 @@ lazy_static! {
 
 
 fn main() {
-    /*use std::process::Command;
-
-    let output = if cfg!(target_os = "windows") {
-        Command::new("cmd")
-            .args(["/C", "python3 gen_manifest.py"])
-            .output()
-            .expect("failed to execute process")
-    } else {
-        Command::new("bash")
-            .arg("-c")
-            .arg("python3 gen_manifest.py")
-            .output()
-            .expect("failed to execute process")
-    };
-
-    let hello = output.stdout;
-    */
 
 
     // Allocate thread pool for simultaneous connections
-    let pool = ThreadPool::new(8);
+    let pool = ThreadPool::new(16);
 
     // This is our listener, which is using TCP to listen for connection
     // requests at some IP address on some port

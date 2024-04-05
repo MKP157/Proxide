@@ -1,84 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
+    <TITLE>Picture Test</TITLE>
 
-        <style>
-            video {
-                width: 80%;
-            }
+    <link rel="stylesheet" href="/style.css">
 
-            #BrowsingControls{
-                display:grid;
-                grid-template-columns: 33.33% 33.33% 33.33%;
-            }
+</head>
+<body id="background">
+<div class="textCentered">
+    <img width="200" src="/PrOxide_Logo.png">
+</div>
+<div id="ProjectContainer" class="basicMargin bordered">
+    <div id="PgHeader" class="basicMargin bordered">Proxide Web Server v1.0 // <var id="current-date"></var></div>
+    <script>
+        const urlElement = document.getElementById("current-url");
+        const dateElement = document.getElementById("current-date");
+        const currentUrl = window.location.href;
+        urlElement.textContent = `${currentUrl}`;
+        dateElement.textContent = `${Date().toString()}`;
+    </script>
 
-            .bordered{
-                border: 1px solid black;
-            }
-
-            .textCentered{
-                text-align: center;
-            }
-
-            .basicMargin{
-                margin: 10px;
-            }
-
-            #PgHeader{
-                margin-bottom: 1px !important;
-            }
-
-            #BrowsingControls{
-                margin-top:0px !important;
-            }
-
-            #background{
-                background-color:rgb(208 206 226);
-            }
-
-            #ProjectContainer{
-                background-color: white;
-            }
-
-            .MenuBackground {
-                background-color: rgb(218 232 252);
-            }
-
-            #videoContainer{
-                text-align: center;
-                max-width: 100%;
-            }
-
-            #VideoDetails{
-                display:grid;
-                grid-template-columns: 50% 50%;
-            }
-
-        </style>
-    </head>
-    <body id="background" onload="startVideo('manifest.mpd');">
-        <div class="textCentered">
-            <img width="200" src="/PrOxide_Logo.png">
-            </img>
+    <div id="BrowsingControls" class="basicMargin">
+        <div class="textCentered bordered MenuBackground" style="margin-right:10px">
+            <button onclick="window.location.href='/home.html'">
+                Home
+            </button>
         </div>
-        <div id="ProjectContainer" class="basicMargin bordered">
-
-
-            <div id="PgHeader" class="textCentered basicMargin bordered">Page Header</div>
-            <div id="BrowsingControls" class="basicMargin">
-                <div class="textCentered bordered MenuBackground" style="margin-right:10px">Home</div>
-                <div class="textCentered bordered MenuBackground">Upload</div>
-                <div class="textCentered bordered MenuBackground" style="margin-left:10px">Browse</div>
-            </div>
-
-            <div>
-                <img src="/crab.jpeg">
-                </img>
-            </div>
-
+        <div class="textCentered bordered MenuBackground">
+            <button onclick="window.location.href='/BrowseDemos.html'">
+                Browse Demos
+            </button>
         </div>
-        <footer class="textCentered">
-            <pre class="textCentered"> &copy;1999 Rustacean Co. </pre>
-        </footer>
-    </body>
+        <div class="textCentered bordered MenuBackground" style="margin-left:10px">
+            <button onclick="window.location.href='/AboutUs.html'">
+                About Us
+            </button>
+        </div>
+    </div>
+    <div id="TitleContainer" class="textCentered bordered basicMargin">
+        <h3>A museum piece...</h3>
+    </div>
+
+    <img src="/crab.jpeg" class="textCentered bordered basicMargin" style="width: 98%">
+
+</div>
+<footer class="textCentered">
+    <pre class="textCentered"> &copy;1999 Rustacean Co. </pre>
+</footer>
+</body>
 </html>
