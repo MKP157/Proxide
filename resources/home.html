@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <TITLE>Home</TITLE>
+
+        <link rel="stylesheet" href="/style.css">
+
+    </head>
+    <body id="background">
+        <div class="textCentered">
+            <img width="200" src="/PrOxide_Logo.png">
+        </div>
+        <div id="ProjectContainer" class="basicMargin bordered">
+            <div id="PgHeader" class="basicMargin bordered">Proxide Web Server v1.0 // <var id="current-date"></var></div>
+            <script>
+                const urlElement = document.getElementById("current-url");
+                const dateElement = document.getElementById("current-date");
+                const currentUrl = window.location.href;
+                urlElement.textContent = `${currentUrl}`;
+                dateElement.textContent = `${Date().toString()}`;
+            </script>
+
+            <div id="BrowsingControls" class="basicMargin">
+                <div class="textCentered bordered MenuBackground" style="margin-right:10px">
+                    <button onclick="window.location.href='/home.html'">
+                        Home
+                    </button>
+                </div>
+                <div class="textCentered bordered MenuBackground">
+                    <button onclick="window.location.href='/BrowseDemos.html'">
+                        Browse Demos
+                    </button>
+                </div>
+                <div class="textCentered bordered MenuBackground" style="margin-left:10px">
+                    <button onclick="window.location.href='/AboutUs.html'">
+                        About Us
+                    </button>                    
+                </div>
+            </div>
+            <div id="TitleContainer" class="textCentered bordered basicMargin">
+                <h3>Project title: Peroxide</h3>
+            </div>
+            <div id="ProjectMembers" class="bordered basicMargin">
+                <div>Project Members</div>
+                <ul>
+                    <li>Josh Hickman</li>
+                    <li>Aiden Manuel</li>
+                    <li>Matthew Peterson</li>
+                </ul>
+            </div>
+
+            <div id="Description" class="bordered basicMargin">
+                The goal of our project has been to get a basic Rust web-server working. <br><br>
+
+                This allows us to explore the basics of responding to web requests, working in Rust and using its threading capabilities.<br><br>
+
+                Primary goal is to be able to provde HTML pages in response to normal web navigation of our site. With optional objective of providing videos encoded by our Architecture project. 
+            </div>
+        </div>
+        <footer class="textCentered">
+            <pre class="textCentered"> &copy;1999 Rustacean Co. </pre>
+        </footer>
+    </body>
+</html>

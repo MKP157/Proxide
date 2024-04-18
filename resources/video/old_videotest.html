@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const urlElement = document.getElementById("current-url");
+            const dateElement = document.getElementById("current-date");
+            const currentUrl = window.location.href;
+            urlElement.textContent = `${currentUrl}`;
+            dateElement.textContent = `${Date().toString()}`;
+        </script>
+
+        <style>
+            video {
+                width: 80%;
+            }
+
+            #BrowsingControls{
+                display:grid;
+                grid-template-columns: 33.33% 33.33% 33.33%;
+            }
+
+            .bordered{
+                border: 1px solid black;
+            }
+
+            .textCentered{
+                text-align: center;
+            }
+
+            .basicMargin{
+                margin: 10px;
+            }
+
+            #PgHeader{
+                margin-bottom: 1px !important;
+            }
+
+            #BrowsingControls{
+                margin-top:0px !important;
+            }
+
+            #background{
+                background-color:rgb(208 206 226);
+            }
+
+            #ProjectContainer{
+                background-color: white;
+            }
+
+            .MenuBackground {
+                background-color: rgb(218 232 252);
+            }
+
+            #videoContainer{
+                text-align: center;
+                max-width: 100%;
+            }
+
+            #VideoDetails{
+                display:grid;
+                grid-template-columns: 50% 50%;
+            }
+
+        </style>
+    </head>
+    <body id="background"">
+        <div class="textCentered">
+            <img width="200" src="/PrOxide_Logo.png">
+            </img>
+        </div>
+        <div id="ProjectContainer" class="basicMargin bordered">
+
+
+            <div id="PgHeader" class="textCentered basicMargin bordered">Proxide Web Server v1.0 // <var id="current-date"></var></div>
+            <div id="BrowsingControls" class="basicMargin">
+                <div class="textCentered bordered MenuBackground" style="margin-right:10px">Home</div>
+                <div class="textCentered bordered MenuBackground">Upload</div>
+                <div class="textCentered bordered MenuBackground" style="margin-left:10px">Browse</div>
+            </div>
+            <div id="videoContainer">
+                <video controls>
+                    <source src="/video/rename.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <div id="VideoDetailsContainer">
+                    <div id="VideoTitle"></div>
+                    <div id="VideoDetails">
+                        <div id="Uploader_Name" class="bordered basicMargin">Author</div>
+                        <div id="Upload_Date" class="bordered basicMargin">Date</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="textCentered">
+            <pre class="textCentered"> &copy;1999 Rustacean Co. </pre>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <TITLE>Picture Test</TITLE>
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body id="background">
+<div class="textCentered">
+    <img width="200" src="/PrOxide_Logo.png">
+</div>
+<div id="ProjectContainer" class="basicMargin bordered">
+    <div id="PgHeader" class="basicMargin bordered">Proxide Web Server v1.0 // <var id="current-date"></var></div>
+    <script>
+        const urlElement = document.getElementById("current-url");
+        const dateElement = document.getElementById("current-date");
+        const currentUrl = window.location.href;
+        urlElement.textContent = `${currentUrl}`;
+        dateElement.textContent = `${Date().toString()}`;
+    </script>
+
+    <div id="BrowsingControls" class="basicMargin">
+        <div class="textCentered bordered MenuBackground" style="margin-right:10px">
+            <button onclick="window.location.href='/home.html'">
+                Home
+            </button>
+        </div>
+        <div class="textCentered bordered MenuBackground">
+            <button onclick="window.location.href='/BrowseDemos.html'">
+                Browse Demos
+            </button>
+        </div>
+        <div class="textCentered bordered MenuBackground" style="margin-left:10px">
+            <button onclick="window.location.href='/AboutUs.html'">
+                About Us
+            </button>
+        </div>
+    </div>
+    <div id="TitleContainer" class="textCentered bordered basicMargin">
+        <h3>A museum piece...</h3>
+    </div>
+
+    <img src="/crab.jpeg" class="textCentered bordered basicMargin" style="width: 98%">
+
+</div>
+<footer class="textCentered">
+    <pre class="textCentered"> &copy;1999 Rustacean Co. </pre>
+</footer>
+</body>
+</html>

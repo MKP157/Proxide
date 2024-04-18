@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <HEAD>
+        <TITLE>404 Not Found</TITLE>
+        <link rel="stylesheet" href="/style.css">
+        <style>
+            body {
+                background-image: url("/banner.jpg");
+            }
+
+            #BrowsingControls{
+                display:grid;
+                grid-template-columns: 33.33% 33.33% 33.33%;
+            }
+
+            .bordered{
+                border: 1px solid black;
+            }
+
+            .textCentered{
+                text-align: center;
+            }
+
+            .basicMargin{
+                margin: 10px;
+            }
+
+            #PgHeader{
+                margin-bottom: 1px !important;
+            }
+
+            #BrowsingControls{
+                margin-top:0px !important;
+            }
+
+            #background{
+                background-color:rgb(208 206 226);
+            }
+
+            #ProjectContainer{
+                background-color: white;
+            }
+
+            .MenuBackground {
+                background-color: rgb(218 232 252);
+            }
+
+            .grid3x{
+                display:grid;
+                grid-template-columns: 50% 50%;
+            }
+
+            #ProjectMembers{
+                background-color: rgb(208 206 226);
+            }
+
+            .PersonContainer{
+                background-color: white;
+            }
+
+            .PersonContainer div {
+                margin:2px;
+            }
+
+            .Person_Image{
+                display:grid;
+                grid-template-columns: 15% 85%;
+            }
+
+            .Person_Image img{
+                max-width: 80px;
+                max-height: 80px;
+            }
+        </style>
+    </HEAD>
+
+    <BODY>
+    <div id="ProjectContainer" class="basicMargin bordered">
+        <div class="textCentered">
+            <img width="200" src="/PrOxide_Logo.png">
+            </img>
+        </div>
+        <HR>
+            <h2>Proxide Web Server // Error 404 (Not Found)</h2>
+            <h3>InDev v1</h3>
+            @<var id="current-date"></var>
+        <HR>
+
+        <p>
+            The requested resource on <b id="current-url"></b> could not be accessed
+            on this Proxide Web Server. Please check that
+            this resource hasn't been moved, and try again later.
+        </p>
+        <p>
+            Have a great day! :)
+        </p>
+
+        <script>
+            const urlElement = document.getElementById("current-url");
+            const dateElement = document.getElementById("current-date");
+            const currentUrl = window.location.href;
+            urlElement.textContent = `${currentUrl}`;
+            dateElement.textContent = `${Date().toString()}`;
+
+            window.location.href = "localhost:9999/404";
+        </script>
+
+    </BODY>
+</HTML>
