@@ -23,8 +23,7 @@ use threadpool::ThreadPool;
 
 // This URI is whatever address the server
 // will be accessed on BY THE CLIENT.
-const _URI: &str = //"127.0.0.1:9999";
-    "networking.mkp157.xyz";
+const _URI: &str = "127.0.0.1:9999";
 
 
 /** read_file_as_bytes ****************************************
@@ -116,7 +115,6 @@ lazy_static! {
 
 
 fn main() {
-
 
     // Allocate thread pool for simultaneous connections
     let pool = ThreadPool::new(16);
